@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="LoginPage">
+    <div class="Ellipse1"></div>
+    <div class="Ellipse2"></div>
+    <div class="LogoSection">
+      <div class="Ellipse4"></div>
+      <div class="Digi108">Digi108</div>
+    </div>
+    <nav class="NavBar">
+      <a href="index.html" class="Home">Home</a> <!-- Updated to navigate to index.html -->
+      <a href="#" class="AboutUs">About us</a>
+      <a href="login.html" class="Login">Login</a>
+      <a href="#" class="SignUp">Sign up</a>
+      <a href="#" class="ContactUs">Contact us</a>
+    </nav>
+    <img class="WhatsappImage20240929At1206061ec29bf01" 
+     src="images/logo.jpg" 
+     alt="WhatsApp Icon" 
+     style="width: 40px; height: 40px; border-radius: 50%; position: absolute; left: 30px; top: 9px; object-fit: cover;" />
+
+
+
+
+    <div class="Line1"></div>
+    <div class="Frame11">
+      <div class="EmailAddress">Username</div>
+      <input type="text" class="InputField" placeholder="Username" id="username">
+      <div class="PasswordLabel">Password</div>
+      <input type="password" class="InputField" placeholder="Password" id="password">
+      <button class="LoginButton" id="loginBtn">LOGIN</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', async () => {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert('Login successful!');
+        window.location.href = 'first.html'; // Redirect to the desired page
+      } else {
+        alert('Login failed: ' + data.message);
+      }
+    });
+  </script>
+</body>
+</html>

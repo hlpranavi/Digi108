@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Website</title>
+    <link rel="stylesheet" href="index_css.css">
+</head>
+<body>
+    <div class="Desktop1">
+        <div class="Ellipse1"></div>
+        <div class="Ellipse2"></div>
+        <img class="Image1" src="images/jj.png" alt="Placeholder Image" />
+        <div class="Quote" id="quote">
+            "Wherever the art of Medicine is loved, <br/>there is also a love of Humanity."
+            <br/>— Hippocrates
+        </div>
+        <div class="Home" id="home">Home</div>
+        <div class="AboutUs" id="aboutUs">About us</div>
+        <div class="Login" id="login">Login</div>
+        <div class="SignUp" id="signUp">Sign up</div>
+        <div class="ContactUs" id="contactUs">Contact us</div>
+        <div class="Digi108">Digi108</div>
+        <div class="Rectangle91"></div>
+        <div class="GetServices" id="getServices">Get Services</div>
+        <div class="Ellipse4"></div>
+        <img class="WhatsappImage" src="https://via.placeholder.com/69x69" alt="Whatsapp Image" />
+        <img class="WhatsappImage20240929At1206061ec29bf01" 
+     src="images/logo.jpg" 
+     alt="WhatsApp Icon" 
+     style="width: 60px; height: 60px; border-radius: 100%; position: absolute; left: 15px; top: 13px; object-fit: cover;" />
+
+        <div class="KeyFeatures" id="keyFeatures">
+            Discuss the key features of effective medical websites that enhance patient engagement and provide reliable health information. Consider elements like telemedicine integration, appointment scheduling, and health education resources. What best practices should healthcare providers follow to create trustworthy online spaces for patients?
+        </div>
+        <div class="Line1"></div>
+        
+        <!-- Language Dropdown -->
+        <div class="language-dropdown">
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+                <option value="ml">malyalam</option>
+            </select>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('languageSelect').addEventListener('change', async function() {
+            const selectedLanguage = this.value;
+            await translateContent(selectedLanguage);
+        });
+
+        async function translateContent(lang) {
+            const elementsToTranslate = [
+                { id: 'quote', text: "Wherever the art of Medicine is loved, there is also a love of Humanity." },
+                { id: 'keyFeatures', text: "Discuss the key features of effective medical websites that enhance patient engagement and provide reliable health information. Consider elements like telemedicine integration, appointment scheduling, and health education resources. What best practices should healthcare providers follow to create trustworthy online spaces for patients?" },
+                { id: 'home', text: "Home" },
+                { id: 'aboutUs', text: "About us" },
+                { id: 'login', text: "Login" },
+                { id: 'signUp', text: "Sign up" },
+                { id: 'contactUs', text: "Contact us" },
+                { id: 'getServices', text: "Get Started" }
+            ];
+
+            for (const element of elementsToTranslate) {
+                const translatedText = await fetchTranslation(element.text, lang);
+                document.getElementById(element.id).innerHTML = translatedText;
+            }
+        }
+
+        async function fetchTranslation(text, lang) {
+            const translationUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${lang}&dt=t&q=${encodeURI(text)}`;
+            
+            try {
+                const response = await fetch(translationUrl);
+                const data = await response.json();
+                return data[0][0][0]; // Returns the translated text
+            } catch (error) {
+                console.error("Translation API error: ", error);
+                return text; // Fallback to original text on error
+            }
+        }
+
+        document.querySelector('.Home').addEventListener('click', () => {
+            //alert('Navigate to Home page!');
+          });
+  
+          document.querySelector('.GetServices').addEventListener('click', () => {
+              if (isLoggedIn) {
+                  window.location.href = 'first.html'; // Navigate to first.html if logged in
+              } else {
+                  window.location.href = 'login.html'; // Redirect to login page if not logged in
+              }
+          });
+          
+          document.querySelector('.AboutUs').addEventListener('click', () => {
+            event.preventDefault(); // Prevent default action
+              window.location.href = 'aboutus.html';
+          });
+  
+          document.querySelector('.Login').addEventListener('click', (event) => {
+              event.preventDefault(); // Prevent default action
+              window.location.href = 'login.html';
+          });
+  
+          document.querySelector('.SignUp').addEventListener('click', (event) => { 
+              event.preventDefault(); // Prevent default action
+              window.location.href = 'signup.html'; // Redirect to signup.html
+          });
+  
+          document.querySelector('.ContactUs').addEventListener('click', () => {
+            event.preventDefault(); // Prevent default action
+              window.location.href = 'contactus.html';
+          });
+    </script>
+</body>
+</html>

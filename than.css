@@ -1,0 +1,170 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inria Serif', serif;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.Desktop1 {
+    width: 100vw; /* Use viewport width */
+    height: 100vh; /* Use viewport height */
+    position: relative;
+    background: white;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    z-index: 10; /* Make sure it's on top */
+}
+
+#languageSelect {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+/* Resize and reposition ellipses */
+.Ellipse1 {
+    width: 70vw; /* Responsive width */
+    height: 50vh; /* Responsive height */
+    left: -10vw;
+    top: -10vh;
+    position: absolute;
+    background: #A4ADE0;
+    border-radius: 50%;
+}
+
+.Ellipse2 {
+    width: 60vw;
+    height: 40vh;
+    left: 55vw;
+    top: 65vh;
+    position: absolute;
+    background: #A4ADE0;
+    border-radius: 50%;
+}
+
+.Image1 {
+    width: 40vw; /* Adjust to fit within the screen */
+    height: auto; /* Maintain aspect ratio */
+    left: 55vw;
+    top: 15vh;
+    position: absolute;
+}
+
+.Quote {
+    width: 40vw; /* Adjust width to be responsive */
+    height: auto;
+    left: 10vw;
+    top: 20vh;
+    position: absolute;
+    color: black;
+    font-size: 2vw; /* Responsive font size */
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.Home, .AboutUs, .Login, .SignUp, .ContactUs {
+    position: absolute;
+    color: black;
+    font-size: 1.2vw; /* Responsive font size */
+    word-wrap: break-word;
+}
+
+.Home {
+    left: 55vw;
+    top: 5vh;
+}
+
+.AboutUs {
+    left: 62vw;
+    top: 5vh;
+}
+
+.Login {
+    left: 70vw;
+    top: 5vh;
+}
+
+.SignUp {
+    left: 78vw;
+    top: 5vh;
+}
+
+.ContactUs {
+    left: 87vw;
+    top: 5vh;
+}
+
+.Digi108 {
+    position: absolute;
+    left: 8vw;
+    top: 3vh;
+    color: black;
+    font-size: 3.5vw; /* Responsive font size */
+    word-wrap: break-word;
+}
+
+.Rectangle91 {
+    width: 15vw; /* Adjusted for responsiveness */
+    height: 8vh; /* Adjusted for responsiveness */
+    left: 10vw;
+    top: 70vh;
+    position: absolute;
+    background: #A4ADE0;
+    border-radius: 10px;
+}
+
+.GetServices {
+    left: 11vw;
+    top: 72vh;
+    position: absolute;
+    color: black;
+    font-size: 2.5vw; /* Responsive font size */
+    word-wrap: break-word;
+}
+
+.Ellipse4 {
+    width: 4vw;
+    height: 4vw;
+    left: 1vw;
+    top: 2vh;
+    position: absolute;
+    background: rgba(221, 221, 221, 0.87);
+    border: 2px black solid;
+    border-radius: 50%; /* Keep circular */
+    overflow: hidden;
+}
+
+.WhatsappImage {
+    width: 4vw; /* Adjusted size */
+    height: auto;
+}
+
+.KeyFeatures {
+    width: 30vw; /* Responsive width */
+    left: 10vw;
+    top: 35vh;
+    position: absolute;
+    color: black;
+    font-size: 1.5vw; /* Responsive font size */
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.Line1 {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0; /* Fixed to bottom */
+}

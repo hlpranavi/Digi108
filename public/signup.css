@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inria Serif, Lora, Arsenal, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.SignUp {
+    width: 100%;
+    max-width: 1440px; /* Max width for large screens */
+}
+
+.Frame12 {
+    width: 80%;
+    max-width: 600px; /* Responsive max width for the form */
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px #402E2A solid;
+}
+
+button {
+    cursor: pointer; /* Pointer effect for the button */
+    transition: background 0.3s; /* Button hover transition */
+}
+
+button:hover {
+    background-color: #D1C6DB; /* Button hover effect */
+}

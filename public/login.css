@@ -1,0 +1,130 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for the login page */
+  .LoginPage {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: white;
+    overflow: hidden;
+  }
+  
+  /* Ellipse background shapes */
+  .Ellipse1, .Ellipse2 {
+    position: absolute;
+    background: #A4ADE0;
+    border-radius: 50%;
+  }
+  
+  .Ellipse1 {
+    width: 50vw;
+    height: 50vh;
+    top: -15vh;
+    left: -15vw;
+  }
+  
+  .Ellipse2 {
+    width: 40vw;
+    height: 40vh;
+    bottom: -10vh;
+    right: -10vw;
+  }
+  
+  /* Logo Section */
+  .LogoSection {
+    position: absolute;
+    top: 1vh;
+    left: 2vw;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Ellipse4 {
+    width: 3vw;
+    height: 3vw;
+    background: rgba(221, 221, 221, 0.87);
+    border: 2px solid black;
+    border-radius: 50%;
+  }
+  
+  .Digi108 {
+    font-size: 2rem;
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 400;
+    margin-left: 1vw;
+  }
+  
+  /* Navigation Bar */
+  .NavBar {
+    position: absolute;
+    top: 3vh;
+    right: 5vw;
+  }
+  
+  .NavBar a {
+    margin: 0 1vw;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Inria Serif', serif;
+    font-weight: 400;
+  }
+  
+  /* Divider Line */
+  .Line1 {
+    width: 100vw;
+    height: 2px;
+    position: absolute;
+    top: 8vh;
+    background: black;
+  }
+  
+  /* Login form container */
+  .Frame11 {
+    width: 40vw;
+    height: 40vh;
+    position: absolute;
+    top: 30vh;
+    left: 30vw;
+    background: white;
+    border-radius: 20px;
+    border: 2px solid #402E2A;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .EmailAddress, .PasswordLabel {
+    font-size: 1.5rem;
+    font-family: 'Arsenal', serif;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  
+  .InputField {
+    width: 90%;
+    height: 3rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #A4ADE0;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    background: rgba(246, 238, 251, 0.5);
+  }
+  
+  .LoginButton {
+    width: 50%;
+    height: 3rem;
+    background: #F6EEFB;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-family: 'Lora', serif;
+    cursor: pointer;
+    margin-top: 2rem;
+  }

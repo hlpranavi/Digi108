@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- WhatsApp Icon -->
+    <img class="WhatsappImage20240929At1206061ec29bf01" 
+         src="images//logo.jpg" 
+         alt="WhatsApp Icon" 
+         style="width: 40px; height: 40px; border-radius: 50%; position: absolute; left: 30px; top: 9px; object-fit: cover;" />
+    
+    <div class="SignUp" style="width: 100%; max-width: 1440px; height: auto; position: relative; background: white; padding: 20px;">
+        <div class="Ellipse1" style="width: 1025px; height: 684px; left: -194px; top: -73px; position: absolute; background: #A4ADE0; border-radius: 9999px;"></div>
+        <div class="Ellipse2" style="width: 964px; height: 595px; left: 572px; top: 556px; position: absolute; background: #A4ADE0; border-radius: 9999px;"></div>
+        <div class="Home" style="left: 750px; top: 43px; position: absolute; color: black; font-size: 25px; font-family: Inria Serif; font-weight: 400;">Home</div>
+        <div class="AboutUs" style="left: 866px; top: 43px; position: absolute; color: black; font-size: 25px; font-family: Inria Serif; font-weight: 400;">About us</div>
+        <div class="Login" style="left: 1016px; top: 43px; position: absolute; color: black; font-size: 25px; font-family: Inria Serif; font-weight: 400;">Login</div>
+        <div class="SignUp" style="left: 1127px; top: 43px; position: absolute; color: black; font-size: 25px; font-family: Inria Serif; font-weight: 400;">Sign up</div>
+        <div class="ContactUs" style="left: 1260px; top: 43px; position: absolute; color: black; font-size: 25px; font-family: Inria Serif; font-weight: 400;">Contact us</div>
+        <div class="Ellipse4" style="width: 58px; height: 58px; left: 27px; top: 29px; position: absolute; background: rgba(221, 221, 221, 0.87); border: 2px black solid;"></div>
+        <div class="Digi108" style="left: 124px; top: 26px; position: absolute; color: black; font-size: 50px; font-family: Inknut Antiqua; font-weight: 400;">Digi108</div>
+        <div class="Line1" style="width: 100%; height: 2px; left: 0; top: 104px; position: absolute; border: 2px black solid;"></div>
+        
+        <div class="Frame12" style="width: 80%; max-width: 600px; margin: 0 auto; padding: 20px; background: white; border-radius: 20px; overflow: hidden; border: 4px #402E2A solid; position: relative; top: 120px;">
+            <div class="CreateANewAccount" style="text-align: center; font-size: 30px; font-family: Lora; font-weight: 500; margin-bottom: 20px;">CREATE A NEW ACCOUNT</div>
+            
+            <form id="signup-form">
+                <div style="margin-bottom: 15px;">
+                    <label for="name" style="font-size: 20px; font-family: Arsenal; font-weight: 400;">Name:</label>
+                    <input type="text" id="name" name="name" style="width: 100%; height: 40px; background: rgba(246, 238, 251, 0.50); border-radius: 5px; border: 1px black solid; padding-left: 10px;" required>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="dob" style="font-size: 20px; font-family: Arsenal; font-weight: 400;">DOB:</label>
+                    <input type="date" id="dob" name="dob" style="width: 100%; height: 40px; background: rgba(246, 238, 251, 0.50); border-radius: 5px; border: 1px black solid; padding-left: 10px;" required>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="gender" style="font-size: 20px; font-family: Arsenal; font-weight: 400;">Gender:</label>
+                    <select id="gender" name="gender" style="width: 100%; height: 40px; background: rgba(246, 238, 251, 0.50); border-radius: 5px; border: 1px black solid;" required>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="contact" style="font-size: 20px; font-family: Arsenal; font-weight: 400;">Contact Number:</label>
+                    <input type="tel" id="contact" name="contact" style="width: 100%; height: 40px; background: rgba(246, 238, 251, 0.50); border-radius: 5px; border: 1px black solid; padding-left: 10px;" required>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="email" style="font-size: 20px; font-family: Arsenal; font-weight: 400;">Email:</label>
+                    <input type="email" id="email" name="email" style="width: 100%; height: 40px; background: rgba(246, 238, 251, 0.50); border-radius: 5px; border: 1px black solid; padding-left: 10px;" required>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="address" style="font-size: 20px; font-family: Arsenal; font-weight: 400;">Address:</label>
+                    <textarea id="address" name="address" style="width: 100%; height: 100px; background: rgba(246, 238, 251, 0.50); border-radius: 5px; border: 1px black solid; padding-left: 10px;" required></textarea>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="password" style="font-size: 20px; font-family: Arsenal; font-weight: 400;">Password:</label>
+                    <input type="password" id="password" name="password" style="width: 100%; height: 40px; background: rgba(246, 238, 251, 0.50); border-radius: 5px; border: 1px black solid; padding-left: 10px;" required>
+                </div>
+                
+                <button type="submit" style="width: 100%; height: 50px; background: #F6EEFB; border-radius: 20px; border: 1px black solid; font-size: 20px; font-family: Lora; color: black;">CREATE</button>
+            </form>
+            
+            <div id="signup-message" style="text-align: center; margin-top: 20px; color: red;"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+        
+            const name = document.getElementById('name').value;
+            const dob = document.getElementById('dob').value;
+            const gender = document.getElementById('gender').value;
+            const contact = document.getElementById('contact').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            const password = document.getElementById('password').value;
+        
+            try {
+                const response = await fetch('http://localhost:3000/signupstudent', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, dob, gender, contact, email, address, password })
+                });
+        
+                const data = await response.json();
+        
+                const messageElement = document.getElementById('signup-message');
+                if (data.success) {
+                    messageElement.innerHTML = 'Sign up successful!'; 
+                } else {
+                    messageElement.innerHTML = 'Error: ' + data.message; 
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                const messageElement = document.getElementById('signup-message');
+                messageElement.innerHTML = 'Error: ' + error.message; 
+            }
+        });
+    </script>
+</body>
+</html>
